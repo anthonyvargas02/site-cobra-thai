@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<!-- 
+  SITE: COBRA THAI
+  Landing page para academia de Muay Thai.
+  Estrutura: Header > Hero > Por que a Cobra Thai > Planos > Legado > Footer
+-->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cobra Thai | Domine a Arte das 8 Armas</title>
+
+  <!-- Google Fonts: uma fonte "condensada e forte" pra títulos (estilo luta/impacto) 
+       e uma fonte simples e legível pro texto normal -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Nosso arquivo de estilos -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ========== HEADER / MENU ========== -->
+  <header class="header" id="header">
+    <div class="container header__content">
+      <a href="#" class="logo">
+        <span class="logo__icon"><img src="/imagens/cobra_sf.png" alt="" srcset=""></span>
+        COBRA THAI
+      </a>
+
+      <!-- Menu de navegação (fica escondido no mobile, veja o JS) -->
+      <nav class="nav" id="nav">
+        <a href="#inicio" class="nav__link">Início</a>
+        <a href="#por-que" class="nav__link">Diferenciais</a>
+        <a href="#planos" class="nav__link">Planos</a>
+        <a href="#legado" class="nav__link">Sobre</a>
+      </nav>
+
+      <a href="https://web.whatsapp.com/" class="btn btn--primary btn--small">Aula Experimental</a>
+
+      <!-- Botão hambúrguer, só aparece no mobile -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========== HERO (primeira seção, chamada principal) ========== -->
+  <section class="hero" id="inicio">
+    <div class="container hero__content">
+      <span class="badge">Aula Experimental Gratuita</span>
+      <h1 class="hero__title">
+        DOMINE A ARTE<br>
+        <span class="text-yellow">DAS 8 ARMAS</span>
+      </h1>
+      <p class="hero__subtitle">
+        Treinamento de alto rendimento para quem quer mais que exercício:
+        buscamos força, técnica e disciplina através do Muay Thai.
+      </p>
+      <a href="#planos" class="btn btn--primary btn--large">Agende sua Aula Grátis</a>
+    </div>
+  </section>
+
+  <!-- ========== POR QUE A COBRA THAI ========== -->
+  <section class="section" id="por-que">
+    <div class="container">
+      <h2 class="section__title">POR QUE O COBRA THAI?</h2>
+
+      <div class="cards-grid">
+        <!-- Cada .card é um cartão de diferencial. O terceiro tem a classe "card--highlight" 
+             pra ficar destacado em amarelo, igual no print -->
+        <div class="card">
+          <div class="card__icon">🏆</div>
+          <h3 class="card__title">Autoridade</h3>
+          <p class="card__text">Metodologia forjada nos ringues, validada por lutadores de alto nível.</p>
+        </div>
+
+        <div class="card">
+          <div class="card__icon">🥋</div>
+          <h3 class="card__title">Técnica</h3>
+          <p class="card__text">Aprimoramento constante com professores qualificados e atenção individual.</p>
+        </div>
+
+        <div class="card card--highlight">
+          <div class="card__icon">🎯</div>
+          <h3 class="card__title">Disciplina</h3>
+          <p class="card__text">Rotina estruturada para desenvolver foco, consistência e evolução real.</p>
+        </div>
+
+        <div class="card">
+          <div class="card__icon">🤝</div>
+          <h3 class="card__title">Comunidade</h3>
+          <p class="card__text">Um ambiente que motiva a evolução mútua entre os alunos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== NOSSOS PLANOS ========== -->
+  <section class="section section--dark" id="planos">
+    <div class="container">
+      <h2 class="section__title">NOSSOS PLANOS</h2>
+      <p class="section__subtitle">Escolha o nível de intensidade que combina com seus objetivos.</p>
+
+      <div class="plans-grid">
+
+        <!-- PLANO BÁSICO -->
+        <div class="plan-card">
+          <h3 class="plan-card__name">Mensal</h3>
+          <p class="plan-card__desc">A base sólida para quem está começando.</p>
+          <ul class="plan-card__list">
+            <li>3x por semana</li>
+            <li>Acesso à academia</li>
+            <li>Avaliação inicial</li>
+          </ul>
+          <a href="#" class="btn btn--outline">Assinar</a>
+        </div>
+
+        <!-- PLANO INTERMEDIÁRIO -->
+        <div class="plan-card">
+          <h3 class="plan-card__name">Trimestral</h3>
+          <p class="plan-card__desc">Evolução constante para quem já pegou o ritmo.</p>
+          <ul class="plan-card__list">
+            <li>3x por semana</li>
+            <li>Acesso a horários livres</li>
+            <li>Aparelhos avançados</li>
+          </ul>
+          <a href="#" class="btn btn--outline">Assinar</a>
+        </div>
+
+        <!-- PLANO ELITE (destaque, igual ao print com selo "MAIS VENDIDO") -->
+        <div class="plan-card plan-card--highlight">
+          <span class="plan-card__badge">Infantil</span>
+          <h3 class="plan-card__name">Kids</h3>
+          <p class="plan-card__desc">O pacote perfeito para seu filho.</p>
+          <ul class="plan-card__list">
+            <li>Acesso ilimitado</li>
+            <li>Todas as modalidades</li>
+            <li>Acompanhamento personalizado</li>
+          </ul>
+          <a href="#" class="btn btn--primary">Assinar</a>
+        </div>
+
+        <!-- PLANO BOOT CAMP (borda vermelha, pra indicar intensidade extrema) -->
+        <div class="plan-card plan-card--intense">
+          <h3 class="plan-card__name">Anual</h3>
+          <p class="plan-card__desc">Treine o ano todo.</p>
+          <ul class="plan-card__list">
+            <li>Treinos intensivos 6x/semana</li>
+            <li>Planejamento de dieta</li>
+            <li>Análise de performance e vídeos</li>
+          </ul>
+          <a href="#" class="btn btn--danger">Assinar</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== NOSSO LEGADO ========== -->
+  <section class="legacy" id="legado">
+    <div class="container legacy__content">
+      <h2 class="legacy__title">NOSSO LEGADO</h2>
+      <p class="legacy__text">
+        Tradição, treinamento de elite e performance absoluta. De volta à Thai,
+        levamos anos formando praticantes de disciplina rigorosa e arte marcial
+        explosiva, conectando nossos alunos ao poder ancestral do Muay Thai.
+      </p>
+      <a href="#" class="btn btn--primary">Nossa História</a>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer__content">
+      <div>
+        <p class="footer__logo">COBRA THAI</p>
+        <p class="footer__tagline">Força, técnica e disciplina no ringue e na vida.</p>
+      </div>
+
+      <nav class="footer__links">
+        <a href="#">Política de Privacidade</a>
+        <a href="#">Termos de Serviço</a>
+        <a href="#">Programa de Afiliados</a>
+        <a href="#">Contato</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Nosso arquivo de JavaScript, sempre no final do body -->
+  <script src="script.js"></script>
+</body>
+</html>
